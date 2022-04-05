@@ -1,0 +1,278 @@
+/* IMPORTS */
+@import url('animate.css');
+
+/* GLOBAL VARIABLES
+-------------------------------------------------- */
+.h1{
+  font-size: 72px;
+}
+
+ h4 , p , .h4 {
+  color:azure !important;
+ }
+*{
+  scroll-behavior: smooth;
+}
+html, body{
+  font-family: 'Cabin', sans-serif;
+  overflow-x: hidden;
+}
+a{
+  text-decoration: none;
+  color:inherit;
+}
+
+.about-me-title,.contact-me-title, .interests-title, .project-title{
+  font-size:6vw;
+}
+
+/* .Headings{
+  visibility: hidden;
+} */
+/* ANIMATION VARIABLES
+-------------------------------------------------- */
+[class^='imghvr-'],
+[class*=' imghvr-'] {
+  background-color: rgba(0,0,0,0);
+}
+/* PARALLAX
+-------------------------------------------------- */
+
+.parallax{
+  padding: 0 0 0 0 !important;
+  overflow: hidden;
+  position: relative;
+}
+
+.parallax-img{
+  min-width: 480px;
+  height:auto;
+  width: 100%;
+  position: absolute;
+}
+
+@media (max-width: 768px) {
+  #background{
+    width: 100%;
+    height: auto;
+    min-width: 480px;
+    overflow-x: hidden;
+  }
+}
+
+#deathstar{
+  width: 100%;
+  height: auto;
+  overflow:hidden;
+}
+
+#astronaut{
+  width:100%;
+  height:auto;
+  z-index: 1;
+  transform: matrix(0.8,0,0,0.8,0,50);
+}
+
+.main-title{
+  position: absolute;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.dancingtext{
+  font-size:6vw;
+  color:azure !important;
+}
+
+.dancingtext:hover{
+  color:darkkhaki !important;
+  -webkit-animation-name: shakeY;
+  animation-name: shakeY;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}  
+.spacer1{
+  width: 100%;
+  height: auto;
+  min-height: 100px;
+  background-image: linear-gradient(black, #1c1e1f);
+}
+/* ABOUT ME
+-------------------------------------------------- */
+.about-me{
+  overflow: hidden;
+  margin: 0 auto 0 auto;
+}
+
+.my-image{
+  border-radius: 50%;
+  max-width: 360px;
+}
+.accordion-body .accordion-button{
+  background-color: #678110 !important;
+}
+
+/* Text Animation */
+
+.about-me-title:hover{
+  color: lightsalmon !important;
+  -webkit-animation-name: rubberBand;
+  animation-name:rubberBand;
+  animation-duration: 1s;
+}
+/* QUOTES
+-------------------------------------------------- */
+.my-quote::before{
+    content: url("img/quote-left-solid.svg");
+    display: block;
+    margin:auto;
+    width: 128px;
+    height: auto;
+    transform: translateY(30px);    
+}
+
+/* INTERESTS
+-------------------------------------------------- */
+
+.interests-title:hover{
+  color:lightslategray!important;
+  -webkit-animation-name: wobble;
+  animation-name: wobble;
+  animation-duration:1s;
+}
+.myinterests{
+  background-image: url(img/bg/background.jpg)!important;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.Interests{
+  height:400px;
+  width: auto;
+  margin: 25px 0 50px 0;
+  background-color: rgba(0 ,0,0 ,0);
+  border: none;
+}
+
+.Interests:hover{
+  transition-timing-function: ease-in-out;
+  transition-duration: 250ms;
+  transform: scale(1.05,1.05);
+  background-image: linear-gradient(red,orange);
+}
+
+/* PROJECTS
+-------------------------------------------------- */
+.project-title:hover{
+  color:lightseagreen!important;
+  -webkit-animation-name: swing;
+  animation-name: swing;
+  animation-duration:1s;
+}
+@keyframes remove {
+  from {width: 400px;height:300px;}
+  to {width: 0px;height:300px;}
+}
+
+@keyframes add {
+  from {width: 0px;height:300px;}
+  to {width: 400px;height:300px;}
+}
+
+
+.Project{
+  width: auto;
+  height: auto;
+  max-height: 300px;
+  max-width: 400px;
+  -webkit-animation-name: none;
+  animation-name: none;
+  animation-duration: 1s;
+}
+
+.removed{
+  width: 0%;
+}
+/* CONTACT ME
+-------------------------------------------------- */
+.contact-me-title:hover{
+  color:rgb(32, 178, 69)!important;
+  -webkit-animation-name: flash;
+  animation-name: flash;
+  animation-duration: 1s;
+}
+
+.contact-form{
+  font-size: 18px;
+  width:75%;
+  height:auto;
+  min-height: 4rem;
+  margin: 1rem auto 1rem auto;
+  border: none;
+  text-align: center;
+  resize: none;
+}
+
+.submitbtn{
+  display: flex;
+  width:100%;
+  margin:auto;
+  max-width: 100px;
+}
+.socialmedia{
+ font-size:3rem;
+ margin: 25px 25px 25px 25px;
+ color:black;
+}
+
+.indeed{
+  width :3rem;
+  height :3rem;
+  margin-top: 1.1rem;
+  color:grey;
+}
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+  @media (max-width: 768px) {
+    .contact-me-title, .interests-title, .project-title, .about-me-title{
+      font-size: 10vh;
+    }
+}
+
+@media (max-width:512px) {
+  .main-title{
+    position: absolute;
+    transform: translate(-75%, -25%);
+    box-align: center;
+    overflow-x: hidden;
+  }
+  .dancingtext{
+    font-size: 6vh;
+  }
+  .contact-me-title, .interests-title, .project-title, .about-me-title{
+    font-size: 6vh;
+  }
+  @keyframes remove {
+    from {width: 100%;height:100% ;}
+    to {width: 0% ;height:0%;}
+  }
+  
+  @keyframes add {
+    from {width: 0%;height:0%;}
+    to {width: 400px;height:300px;}
+  }
+  .Project{
+    width:100%;
+    height:auto;
+  }
+  .outelement,.outelement2{
+    margin: 1vh;
+  }
+  .navbar{
+    z-index: 3px;
+  }
+}
+
+
